@@ -5,7 +5,7 @@
     <artifactId>${artifactId}</artifactId>
     <packaging>war</packaging>
     <version>${version}</version>
-    <name>Spring REST Archetype :: Webapp</name>
+    <name>${artifactId} :: Webapp</name>
 
     <parent>
         <groupId>${groupId}</groupId>

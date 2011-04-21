@@ -5,7 +5,7 @@
     <artifactId>${artifactId}</artifactId>
     <packaging>pom</packaging>
     <version>${version}</version>
-    <name>Spring REST Archetype</name>
+    <name>${artifactId}</name>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -124,7 +124,7 @@
     </repositories>
 
     <build>
-        <finalName>spring-rest-template</finalName>
+        <finalName>${artifactId}</finalName>
         <plugins>
             <!-- Ensures we are compiling at 1.6 level -->
             <plugin>

@@ -24,20 +24,6 @@
         <include>**/*.java</include>
       </includes>
     </fileSet>
-    <fileSet encoding="UTF-8">
-      <directory>functional-tests/target</directory>
-      <includes>
-        <include>**/*.class</include>
-        <include>**/*.css</include>
-      </includes>
-    </fileSet>
-    <fileSet encoding="UTF-8">
-      <directory></directory>
-      <includes>
-        <include>README.md</include>
-        <include>.gitignore</include>
-      </includes>
-    </fileSet>
   </fileSets>
   <modules>
     <module id="${rootArtifactId}-webapp" dir="webapp" name="${rootArtifactId}-webapp">
