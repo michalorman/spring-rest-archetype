@@ -27,12 +27,12 @@ execute:
 
     $ mvn archetype:generate -DarchetypeCatalog=local
 
-Than choose the correct archetype provide your group and artifact
+Then choose the correct archetype, provide your group and artifact
 identifiers and you're done.
 
 ## Project Structure
 
-The project is divided in following modules:
+The project is divided into following modules:
 
 * Core module
 * Webapp module
@@ -44,7 +44,8 @@ it is a good practice to implement some modules, like clients to external servic
 The webapp module is a place where all application configuration files are stored (``web.xml``, Spring, DB and
 logger configuration).
 
-The functional tests module is a place, as a name says, functional tests go. It is my personal preference instead
+The functional tests module is a place where, as a name says,
+functional tests go. It is my personal preference that instead
 of simulating container I like to run all functional tests in a real container. By default this module contains
 configuration for Jetty 6 and Tomcat 6 so you can run tests on those two containers. It is straight forward to add
 configuration for another container, check [Cargo plugin](http://cargo.codehaus.org/Maven2+plugin) for more details.
@@ -55,14 +56,15 @@ To build a project navigate to parent module directory and type:
 
     $ mvn install
 
-Your project will be compiled, packaged and installed in your local repository. If you rather do not want to install
-application on your local repository execyte:
+Your project will be compiled, packaged and installed into your local repository. If you rather do not want to install
+application on your local repository execute:
 
     $ mvn package
 
 The target WAR archive is in ``~/webapp/target/`` (the ``target`` directory of webapp module).
 
-By default command will build the core and webapp modules.
+By default command will build the core and webapp modules omitting the
+functional tests module.
 
 ### Running the Project
 
@@ -83,17 +85,20 @@ If you rather preffer to run the application on Tomcat execute:
 The functional tests module allows you to run tests against the real application deployed on real container instead of
 simulating container in your unit tests.
 
-While the functional testing may be time consuming process those tests are not run by default. You have two options
-of running tests. You can run functional tests as building the project by executing following command from parent
+While the functional testing is time consuming process
+functional tests are not run by default (during the normal application
+build). 
+
+You have two options two run functional tests. You can run functional tests while building the project by executing following command from parent
 module directory:
 
     $ mvn install -Pfunctional-tests
 
-Or you can build normally the application navigate to functional tests module directory and execute:
+Or you can build normally the application, navigate to functional tests module directory and execute:
 
     $ mvn verify
 
-By default functional tests are executed on Jett 6 container. If you
+By default functional tests are executed on Jetty 6 container. If you
 rather want to use Tomcat execute one of the following:
 
     $ mvn install -Pfunctional-tests,tomcat6x
