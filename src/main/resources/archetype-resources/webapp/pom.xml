@@ -5,7 +5,7 @@
     <artifactId>${artifactId}</artifactId>
     <packaging>war</packaging>
     <version>${version}</version>
-    <name>${artifactId} :: Webapp</name>
+    <name>${rootArtifactId} :: Webapp</name>
 
     <parent>
         <groupId>${groupId}</groupId>

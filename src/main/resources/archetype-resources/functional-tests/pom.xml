@@ -3,10 +3,10 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>${package}</groupId>
-    <artifactId>${artifactId}-functional-tests</artifactId>
+    <artifactId>${artifactId}</artifactId>
     <packaging>pom</packaging>
     <version>${version}</version>
-    <name>${artifactId} :: Functional Tests</name>
+    <name>${rootArtifactId} :: Functional Tests</name>
 
     <properties>
         <test.port>8081</test.port>
@@ -60,14 +60,14 @@
 
     <parent>
         <groupId>${package}</groupId>
-        <artifactId>${artifactId}</artifactId>
+        <artifactId>${rootArtifactId}</artifactId>
         <version>${version}</version>
     </parent>
 
     <dependencies>
         <dependency>
             <groupId>${package}</groupId>
-            <artifactId>${artifactId}-webapp</artifactId>
+            <artifactId>${rootArtifactId}-webapp</artifactId>
             <version>${version}</version>
             <type>war</type>
         </dependency>
@@ -117,7 +117,7 @@
                         <deployables>
                             <deployable>
                                 <groupId>${package}</groupId>
-                                <artifactId>${artifactId}-webapp</artifactId>
+                                <artifactId>${rootArtifactId}-webapp</artifactId>
                                 <type>war</type>
                                 <properties>
                                     <context>${artifactId}</context>
