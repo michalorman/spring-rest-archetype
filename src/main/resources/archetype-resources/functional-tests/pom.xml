@@ -2,7 +2,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>${package}</groupId>
+    <groupId>${groupId}</groupId>
     <artifactId>${artifactId}</artifactId>
     <packaging>pom</packaging>
     <version>${version}</version>
@@ -59,14 +59,14 @@
     </profiles>
 
     <parent>
-        <groupId>${package}</groupId>
+        <groupId>${groupId}</groupId>
         <artifactId>${rootArtifactId}</artifactId>
         <version>${version}</version>
     </parent>
 
     <dependencies>
         <dependency>
-            <groupId>${package}</groupId>
+            <groupId>${groupId}</groupId>
             <artifactId>${rootArtifactId}-webapp</artifactId>
             <version>${version}</version>
             <type>war</type>
@@ -116,7 +116,7 @@
                         </properties>
                         <deployables>
                             <deployable>
-                                <groupId>${package}</groupId>
+                                <groupId>${groupId}</groupId>
                                 <artifactId>${rootArtifactId}-webapp</artifactId>
                                 <type>war</type>
                                 <properties>
